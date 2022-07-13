@@ -1,0 +1,13 @@
+table{
+    border: 5em;
+    border-color: rgb(255, 175, 84);
+    color: #424242;
+    border-radius: 5%;    
+}
+
+body{
+    background-color:aliceblue;
+}
+a{
+    color: #424242
+}
