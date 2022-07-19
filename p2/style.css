@@ -1,8 +1,8 @@
-table{
-    border: 5em;
-    border-color: rgb(255, 175, 84);
+table, th, tr, td{
+    border: 2px solid sandybrown;
+    border-color: rgb(255, 155, 61);
     color: #424242;
-    border-radius: 5%;    
+    border-radius: 1%;    
 }
 
 body{
