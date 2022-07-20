@@ -1,3 +1,4 @@
+document.write("<h3>3a.Fibonacci!</h3>")
 n=prompt("Enter a number minimum 2!");
 /*if(n==1)
 console.log(0);
