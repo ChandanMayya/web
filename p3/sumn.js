@@ -3,4 +3,4 @@ n=prompt("Enter a number");
 for(i=1;i<=n;i++){
     sum+=i;
 }
-alert(sum);
+alert("Sum is:"+sum);
