@@ -1,14 +1,12 @@
 n=prompt("Enter a number");
-var p=[0,0,0];
+//var p=[0,0,0];
 s=0;
 for(i=0;i<3;i++){
-    p[i]=n[i]**3;
-    console.log(n[i]);
-    s+=p[i];
+    //p[i]=n[i]**3;
+    //s+=p[i];
+    s+=n[i]**3;
 }
-    
-alert(s)
 if(n==s)
-    alert("Armstrong number");
+    alert("Amstrong number");
 else    
-    alert("Not an")
+    alert("Not an Amstrong number")
