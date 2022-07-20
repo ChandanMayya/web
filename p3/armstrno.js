@@ -1,10 +1,11 @@
 n=prompt("Enter a number");
 //var p=[0,0,0];
 s=0;
-for(i=0;i<3;i++){
+l=n.length;
+for(i=0;i<l;i++){
     //p[i]=n[i]**3;
     //s+=p[i];
-    s+=n[i]**3;
+    s+=n[i]**l;
 }
 if(n==s)
     alert("Amstrong number");
