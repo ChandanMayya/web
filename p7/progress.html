@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+    <script>
+        function loader(){
+            var ele=document.getElementById("anagha");
+            ele.setAttribute("value",ele.value+=25);
+            /*if(ele.value>=100)
+                ele.value=25;
+                var ele=document.getElementById("anagha");**/
+        }
+    </script>
+</head>
+<body>
+    <h1 onclick="loader()">Click ME</h1>
+    <progress value="10" max="100" id="anagha"></progress>
+    <h1>Video Below:</h1>
+    <video src="grass.mp4" autoplay controls height="450" ></video>
+</body>
+</html>
