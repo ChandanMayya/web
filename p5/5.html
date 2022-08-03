@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+            var str=document.getElementById("usn").value;
+            if(str.match(/[0-4][A-Z][A-Z][0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9]/)===null)
+                alert("NOT VALID");
+            else
+                alert("VALID");
+        }
+        function valsem(){
+            var str=document.getElementById("sem").value;
+            if(str.match(/[1-6]/)===null)
+                alert("SEM MUST BE b/w 1 and 6")
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        USN:<input type="text" id="usn" onchange="validate();">
+        SEMISTER: <input type="text" id="sem" onchange="valsem();"
+    </form>
+</body>
+</html>
