@@ -7,18 +7,34 @@
     <title>Progress Bar</title>
     <script>
         function loader(){
-            var ele=document.getElementById("anagha");
-            ele.setAttribute("value",ele.value+=25);
-            /*if(ele.value>=100)
-                ele.value=25;
-                var ele=document.getElementById("anagha");**/
+            var prog=document.getElementById("anagha");
+            let nve=0;
+            var c=document.getElementsByName("stud");
+            for(i=0;i<c.length;i++)
+                if(c[i].validity.valid)
+                   nve++;
+            prog.value=nve*20;
         }
     </script>
 </head>
 <body>
-    <h1 onclick="loader()">Click ME</h1>
-    <progress value="10" max="100" id="anagha"></progress>
-    <h1>Video Below:</h1>
-    <video src="grass.mp4" autoplay controls height="450" ></video>
+    <h1>Progress</h1>
+    <form>
+        Name: 
+        <input type="text" required id="text1" name="stud" onchange="loader();">
+        <br>
+        DOB:
+        <input type="date" required id="text2" name="stud" onchange="loader();">
+        <br>
+        Email:
+        <input type="email" required id="text3" name="stud" onchange="loader();"><br>
+        Contact:
+        <input type="number" required pattern="[0-9]{10}" id="text4" name="stud" onchange="loader();"><br>
+        City:
+        <input type="text" required name="stud" id="text5" onchange="loader();">
+        
+    </form>
+
+    <progress value="0" max="100" id="anagha"></progress>
 </body>
 </html>

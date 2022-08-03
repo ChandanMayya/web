@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        str=prompt();
-        alert(str.indexOf(str.match(/[aeiouAEIOU]/))+1);
+        function onclickk(){
+            str=document.getElementById("textt")
+            alert(str.indexOf(str.match(/[aeiouAEIOU]/))+1);    
+        }
     </script>
 </head>
 <body>
-    
+    <form action="onclickk()">
+        <input type="text" id="textt">
+        <input type="button" id="submit" width="25" height="25" onclick="onclickk"></button>
+    </form>
 </body>
 </html>
