@@ -17,6 +17,8 @@
             var str=document.getElementById("sem").value;
             if(str.match(/[1-6]/)===null)
                 alert("SEM MUST BE b/w 1 and 6")
+            else   
+                alert("Valid!");
         }
     </script>
     <style>
@@ -32,12 +34,12 @@
     <form>
         <div class="row">
         <div class="col-6 md-6">
-            <label for="usn" >USN:</label><input class="form-control" type="text" id="usn" onchange="validate();">
-            <button type="button" class="btn btn-primary">Validate</button>
+            <label for="usn" >USN:</label><input class="form-control" type="text" id="usn">
+            <button type="button" class="btn btn-primary" onclick="validate();">Validate</button>
         </div>
-        <div class="col-6 md-6">
-       <label for="sem">SEMISTER: </label><input class="form-control" type="text" id="sem" onchange="valsem();">
-       <button type="button" class="btn btn-primary">Validate</button>
+            <div class="col-6 md-6">
+            <label for="sem">SEMISTER: </label><input class="form-control" type="text" id="sem">
+            <button type="button" class="btn btn-primary" onclick="valsem();">Validate</button>
     </div>
 </div>
     </form>
