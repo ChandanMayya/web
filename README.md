@@ -1,6 +1,7 @@
 # web
 
 #PART A
+
 1.Create an XHTML page that provides information about your department. Your XHTML page 
 must use the following tags: 
 a) Text Formatting tags 
@@ -79,6 +80,7 @@ a) Limit character input in the text area including count.
 b) Based on check box, disable/enable the form submit button.
 
 #PART B
+
 Develop a web application (mini-project) using the languages and concepts learnt in the theory 
 and exercises listed in part A with a good look and feel effects. Database connection needs to be 
 implemented. 
