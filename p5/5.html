@@ -19,12 +19,32 @@
                 alert("SEM MUST BE b/w 1 and 6")
         }
     </script>
+    <style>
+        input {
+            display: block;
+            border: 5px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="container">
     <form>
-        USN:<input type="text" id="usn" onchange="validate();">
-        SEMISTER: <input type="text" id="sem" onchange="valsem();"
+        <div class="row">
+        <div class="col-6 md-6">
+            <label for="usn" >USN:</label><input class="form-control" type="text" id="usn" onchange="validate();">
+            <button type="button" class="btn btn-primary">Validate</button>
+        </div>
+        <div class="col-6 md-6">
+       <label for="sem">SEMISTER: </label><input class="form-control" type="text" id="sem" onchange="valsem();">
+       <button type="button" class="btn btn-primary">Validate</button>
+    </div>
+</div>
     </form>
+</div> 
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
