@@ -7,16 +7,17 @@
     <title>P6b</title>
 
     <script>
-        var rnum="";
         function reverse(){
-            var rnum="0";
+            var rnum="";
             num=document.getElementById("rec").value;
             if(num.match(/[0-9]/)){
-                for(i=num.length;i>=0;i--)
+                for(i=num.length-1;i>=0;i--)
                     rnum+=num[i];
                 alert("Original Number: "+num+"\n Reversed number :"+rnum);
+                document.getElementById("dynamictext").innerHTML="<p>Reversed Text is: "+rnum+"</p>";
             }else{
                 alert("Please enter valid number...");
+                document.getElementById("dynamictext").innerHTML="<p>Numbers are the series of characters that range from 0 to 9! </p>";
             }
         }
     </script>
@@ -27,8 +28,10 @@
 </head>
 <body>
     <div class="container">
+        <h5>Enter a number to reverse:</h5>
         <input type="text" name="receive" id="rec">
         <input class="btn btn-info btn-sm" type="button" value="Reverse It" onclick="reverse();"></button>
+        <div id="dynamictext"></div>
     </div>
 </body>
 </html>
