@@ -12,9 +12,8 @@
     <script>
         var total=0;
         function add(fruit){
-            if(fruit.checked){
+            if(fruit.checked)
                 total+=parseInt(fruit.value);
-            }
             else   
                 total-=parseInt(fruit.value);
             document.getElementById("res").innerHTML="<h4>Total= $"+total+"</h4>";
