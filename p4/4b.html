@@ -19,40 +19,6 @@
         var total=0;
         a=b=o=0;
         function add(){
-        //     if(fruit.checked){
-        //         if(val==1)
-        //         {
-        //             if(document.getElementById("appleqty").value==0)
-        //                     document.getElementById("appleqty").value=1;
-        //                 total+=parseInt(fruit.value)*document.getElementById("appleqty").value;
-        //         }else if(val==2){
-        //             if(document.getElementById("orangeqty").value==0)
-        //                     document.getElementById("orangeqty").value=1;
-        //                 total+=parseInt(fruit.value)*document.getElementById("orangeqty").value;
-        //         }
-        //         else if(val==3){
-        //             if(document.getElementById("bananaqty").value==0)
-        //                     document.getElementById("bananaqty").value=1;
-        //                 total+=parseInt(fruit.value)*document.getElementById("bananaqty").value;
-        //         }
-        //     }else{
-        //         if(val==1){
-        //             total-=parseInt(fruit.value)*document.getElementById("appleqty").value;
-        //             document.getElementById("appleqty").value=0;
-        //         }else if(val==2){
-        //             total-=parseInt(fruit.value)*document.getElementById("appleqty").value;
-        //             document.getElementById("orangeqty").value=0;
-        //         }else if(val==3){
-        //             total-=parseInt(fruit.value)*document.getElementById("appleqty").value;
-        //             document.getElementById("bananaqty").value=0;
-        //         }
-        //     }
-        //     document.getElementById("res").innerHTML="<h4>Total is $"+total/100;
-        // }
-
-        // function proceedalrt(){
-        //     alert("your total cost is $"+(total+(total*5)/100)/100 +"\n(5% tax included)");
-        //     return false;
 
             if(document.getElementById("apple").checked)
                 a=parseInt(document.getElementById("appleqty").value*document.getElementById("apple").value);
@@ -70,10 +36,7 @@
             document.getElementById("res").innerHTML="<h4>Total is: $"+(total/100)+"</h4>";
             alert("your total cost is $"+(total+(total*5)/100)/100 +"\n(5% tax included)");
             return false;
-
         }
-
-
     </script>
 </head>
 <body >
