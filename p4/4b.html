@@ -17,43 +17,62 @@
     </style>
     <script>
         var total=0;
+        a=b=o=0;
+        function add(){
+        //     if(fruit.checked){
+        //         if(val==1)
+        //         {
+        //             if(document.getElementById("appleqty").value==0)
+        //                     document.getElementById("appleqty").value=1;
+        //                 total+=parseInt(fruit.value)*document.getElementById("appleqty").value;
+        //         }else if(val==2){
+        //             if(document.getElementById("orangeqty").value==0)
+        //                     document.getElementById("orangeqty").value=1;
+        //                 total+=parseInt(fruit.value)*document.getElementById("orangeqty").value;
+        //         }
+        //         else if(val==3){
+        //             if(document.getElementById("bananaqty").value==0)
+        //                     document.getElementById("bananaqty").value=1;
+        //                 total+=parseInt(fruit.value)*document.getElementById("bananaqty").value;
+        //         }
+        //     }else{
+        //         if(val==1){
+        //             total-=parseInt(fruit.value)*document.getElementById("appleqty").value;
+        //             document.getElementById("appleqty").value=0;
+        //         }else if(val==2){
+        //             total-=parseInt(fruit.value)*document.getElementById("appleqty").value;
+        //             document.getElementById("orangeqty").value=0;
+        //         }else if(val==3){
+        //             total-=parseInt(fruit.value)*document.getElementById("appleqty").value;
+        //             document.getElementById("bananaqty").value=0;
+        //         }
+        //     }
+        //     document.getElementById("res").innerHTML="<h4>Total is $"+total/100;
+        // }
 
-        function add(fruit,val){
-            if(fruit.checked){
-                if(val==1)
-                {
-                    if(document.getElementById("appleqty").value==0)
-                            document.getElementById("appleqty").value=1;
-                        total+=parseInt(fruit.value)*document.getElementById("appleqty").value;
-                }else if(val==2){
-                    if(document.getElementById("orangeqty").value==0)
-                            document.getElementById("orangeqty").value=1;
-                        total+=parseInt(fruit.value)*document.getElementById("orangeqty").value;
-                }
-                else if(val==3){
-                    if(document.getElementById("bananaqty").value==0)
-                            document.getElementById("bananaqty").value=1;
-                        total+=parseInt(fruit.value)*document.getElementById("bananaqty").value;
-                }
-            }else{
-                if(val==1){
-                    total-=parseInt(fruit.value)*document.getElementById("appleqty").value;
-                    document.getElementById("appleqty").value=0;
-                }else if(val==2){
-                    total-=parseInt(fruit.value)*document.getElementById("appleqty").value;
-                    document.getElementById("orangeqty").value=0;
-                }else if(val==3){
-                    total-=parseInt(fruit.value)*document.getElementById("appleqty").value;
-                    document.getElementById("bananaqty").value=0;
-                }
-            }
-            document.getElementById("res").innerHTML="<h4>Total is $"+total/100;
-        }
+        // function proceedalrt(){
+        //     alert("your total cost is $"+(total+(total*5)/100)/100 +"\n(5% tax included)");
+        //     return false;
 
-        function proceedalrt(){
+            if(document.getElementById("apple").checked)
+                a=parseInt(document.getElementById("appleqty").value*document.getElementById("apple").value);
+            else
+                a=0;
+            if(document.getElementById("orange").checked)
+                o=parseInt(document.getElementById("orangeqty").value*document.getElementById("apple").value);
+            else
+                o=0;
+            if(document.getElementById("banana").checked)
+                b=parseInt(document.getElementById("bananaqty").value*document.getElementById("apple").value);
+            else
+                b=0;
+            total=a+o+b;
+            document.getElementById("res").innerHTML="<h4>Total is: $"+(total/100)+"</h4>";
             alert("your total cost is $"+(total+(total*5)/100)/100 +"\n(5% tax included)");
             return false;
+
         }
+
 
     </script>
 </head>
@@ -73,7 +92,7 @@
         <div class="row">
             <div class="col-2  col-md-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="59" id="apple" name="afruit" onclick="add(this,1);" >
+                  <input class="form-check-input" type="checkbox" value="59" id="apple" name="afruit" >
                   <label class="form-check-label disp" for="fruits">
                     Apple (59cents) 
                   </label>
@@ -86,7 +105,7 @@
         <div class="row">
             <div class="col-2 col-md-2">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="49" id="orange" name="fruits" onclick="add(this,2);">
+                    <input class="form-check-input" type="checkbox" value="49" id="orange" name="fruits">
                     <label class="form-check-label" for="fruits">
                     Orange (49cents)
                     </label>
@@ -99,7 +118,7 @@
         <div class="row">
             <div class="col-2  col-md-">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="39" id="banana" name="fruits" onclick="add(this,3);">
+                    <input class="form-check-input" type="checkbox" value="39" id="banana" name="fruits"">
                     <label class="form-check-label" for="fruits">
                       Banana (39cents)
                     </label>
@@ -114,7 +133,7 @@
             <h4>$0</h4>
         </div>
         <div class="col-2 col-md-2">
-            <button type="submit" class="btn btn-primary" value="Submit" onclick="proceedalrt();">Submit</button>
+            <button type="submit" class="btn btn-primary" value="Submit" onclick="add();">Submit</button>
         </div>
     </div>
 </body>
