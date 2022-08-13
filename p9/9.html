@@ -1,14 +1,32 @@
-<!DOCTYPE html>
+<!DOCTYPE html>         <!------Not Completed...------>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
+    <style>
+        label{
+            display: block;
+            margin: 10px;
+        }
+        input[type=text]{
+            border: 2px solid green;
+            background: yellow;
+        }
+    </style>
 </head>
 <body>
     <form>
-        <label for="tb1">Number 1: <input type="text" name="tb1" id="tb1"></label>
+        <label for="tb1">Number 1: <input type="text" name="tb1" id="tb1" required></label>
+        <label for="tb2">Number 2: <input type="text" name="tb2" id="tb2" required></label>
+        <label for="res">Result: <input type="text" name="res" id="res" disabled></label>
+        <input type="button" value="ADD">
+        <input type="button" value="SUB">
+        <input type="button" value="MUL">
+        <input type="button" value="DIV">
+        <input type="reset" value="CLEAR">
+       
     </form>
 </body>
 </html>
