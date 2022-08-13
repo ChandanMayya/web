@@ -27,17 +27,19 @@
             tb1=document.getElementById("tb1");
             tb2=document.getElementById("tb2");
             res=document.getElementById("res");
-            if(val==1)  //add
-                res.value=parseInt(tb1.value)+parseInt(tb2.value);
-            if(val==2)  //sub
-                res.value=parseInt(tb1.value)-parseInt(tb2.value);
-            if(val==3)  //mul
-                res.value=parseInt(tb1.value)*parseInt(tb2.value);
-            if(val==4)  //div
-                if(tb2.value=="0")
-                    res.value="Divide bt zero error..";
-                else
+            if(tb1.value==0 || tb2.value==0){
+                res.value="Give proper values"
+            }
+            else{
+                if(val==1)  //add
+                    res.value=parseInt(tb1.value)+parseInt(tb2.value);
+                if(val==2)  //sub
+                    res.value=parseInt(tb1.value)-parseInt(tb2.value);
+                if(val==3)  //mul
+                    res.value=parseInt(tb1.value)*parseInt(tb2.value);
+                if(val==4)  //div
                     res.value=parseInt(tb1.value)/parseInt(tb2.value);
+            }
         }
     </script>
 </head>
@@ -48,9 +50,9 @@
         <label for="tb2">Number 2: <input type="text" name="tb2" id="tb2" value="0" required></label>
         <label for="res">Result: <input type="text" name="res" id="res"></label>
         <input type="button" value="ADD" onclick="calzi(1)">
-        <input type="button" value="SUB">
-        <input type="button" value="MUL">
-        <input type="button" value="DIV">
+        <input type="button" value="SUB" onclick="calzi(2)">
+        <input type="button" value="MUL"onclick="calzi(3)">
+        <input type="button" value="DIV" onclick="calzi(4)">
         <input type="reset" value="CLEAR">
        
     </form>
