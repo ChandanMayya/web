@@ -27,20 +27,25 @@
             tb1=document.getElementById("tb1");
             tb2=document.getElementById("tb2");
             res=document.getElementById("res");
-            //alert (tb1.value);
-            if(val==1){
-                tb2.value=2;
-                res.value=tb1.value+tb.value;
-                alert(res.value)
-            }
+            if(val==1)  //add
+                res.value=parseInt(tb1.value)+parseInt(tb2.value);
+            if(val==2)  //sub
+                res.value=parseInt(tb1.value)-parseInt(tb2.value);
+            if(val==3)  //mul
+                res.value=parseInt(tb1.value)*parseInt(tb2.value);
+            if(val==4)  //div
+                if(tb2.value=="0")
+                    res.value="Divide bt zero error..";
+                else
+                    res.value=parseInt(tb1.value)/parseInt(tb2.value);
         }
     </script>
 </head>
 <body>
     <form>
         <h3>A Simple Calculator</h3>
-        <label for="tb1">Number 1: <input type="text" name="tb1" id="tb1" required></label>
-        <label for="tb2">Number 2: <input type="text" name="tb2" id="tb2" required></label>
+        <label for="tb1">Number 1: <input type="text" name="tb1" id="tb1" value="0" required></label>
+        <label for="tb2">Number 2: <input type="text" name="tb2" id="tb2" value="0" required></label>
         <label for="res">Result: <input type="text" name="res" id="res"></label>
         <input type="button" value="ADD" onclick="calzi(1)">
         <input type="button" value="SUB">
