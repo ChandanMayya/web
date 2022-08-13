@@ -14,14 +14,35 @@
             border: 2px solid green;
             background: yellow;
         }
+        h3{
+            text-transform: uppercase;
+        }
+        body{
+            background: rgb(233, 233, 233);
+        }
     </style>
+    <script>
+        function calzi(val){
+            
+            tb1=document.getElementById("tb1");
+            tb2=document.getElementById("tb2");
+            res=document.getElementById("res");
+            //alert (tb1.value);
+            if(val==1){
+                tb2.value=2;
+                res.value=tb1.value+tb.value;
+                alert(res.value)
+            }
+        }
+    </script>
 </head>
 <body>
     <form>
+        <h3>A Simple Calculator</h3>
         <label for="tb1">Number 1: <input type="text" name="tb1" id="tb1" required></label>
         <label for="tb2">Number 2: <input type="text" name="tb2" id="tb2" required></label>
-        <label for="res">Result: <input type="text" name="res" id="res" disabled></label>
-        <input type="button" value="ADD">
+        <label for="res">Result: <input type="text" name="res" id="res"></label>
+        <input type="button" value="ADD" onclick="calzi(1)">
         <input type="button" value="SUB">
         <input type="button" value="MUL">
         <input type="button" value="DIV">
