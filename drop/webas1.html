@@ -8,6 +8,9 @@
 </head>
 <body>
     <header><h1>Employee Details Form..</h1>    </header>
+    <aside>
+        <p>This form is just to collect infromation regarding the Employees</p>
+    </aside>
     <form>
         <label for="name">Name: <input type="text" name="name" id="name"></label>
         <label for="dob">DOB: <input type="date" name="dob" id="dob"></label>
@@ -17,16 +20,20 @@
             <input type="checkbox" name="hobbies" id="hobbi2" value="Dancing">Dancing</input>
         </label>
         <label for="contact">Contact: <input type="tel" name="contact" id="contact"></label>
-        <label for="range">Rate yourself your efficiency: <input type="range" name="range" id="range" min="0" max="10" value="2"></label>
-        <label for="gender">Gender :
+         <label for="gender">Gender :
             <input type="radio" name="radio" id="male">Male</input>
             <input type="radio" name="radio" id="female">Female</input>
             <input type="radio" name="radio" id="nts">Prefer not to say</input>
         </label>
+        <label for="txtarea">Address:<textarea style="margin-left: 53px"></textarea></label>
+        <label for="range">Rate yourself your efficiency: <input type="range" name="range" id="range" min="0" max="10" value="2"></label>
+       
         <input type="submit" value="submit">
         <input type="reset" value="clear">
     </form>
-
+    <footer>
+        <small>This is not issued by any industry..</small>
+    </footer>
     <style>
         label{
             display: block;
