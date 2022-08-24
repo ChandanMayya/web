@@ -5,11 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P11A</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+          $(function(){
+            $("button").click(function(){
+                if($(this).text()=='Fade Out'){
+                    $("div").fadeOut(1500);
+                    $(this).text('Fade In')
+                }else{
+                    $("div").fadeIn(1500);
+                    $(this).text('Fade Out');
+                }
+            });  
+        });
+    </script>
 </head>
 <body>
     <div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, possimus? Alias, fugit excepturi, officiis sit obcaecati, rem aliquid laboriosam nemo iusto repellendus libero quasi quis quaerat voluptate sint dolorem sequi?</p>
+        <p>HI! Please press upon the button below to hide or show me!!!</p>
     </div>
-    <button>Fade IN</button>
+    <button>Fade Out</button>
 </body>
 </html>
