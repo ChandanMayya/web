@@ -79,6 +79,11 @@ b) Based on check box, disable/enable the form submit button.
 a) Limit character input in the text area including count. 
 b) Based on check box, disable/enable the form submit button.
 
+
+11.Develop and demonstrate using jQuery to solve the following: 
+a) Fade in and fade out all division elements. 
+b) Animate an element, by changing its height and width.
+
 #PART B
 
 Develop a web application (mini-project) using the languages and concepts learnt in the theory 
